@@ -3,6 +3,7 @@ using namespace std;
 
 //方式一：Brute Froce
 //S为主字符串，T为子字符串
+//https://www.bilibili.com/video/av95949609
 int BF(char* S, char* T)
 {
 	int i, j;
@@ -40,6 +41,7 @@ int BF(char* S, char* T)
 匹配失败的位置为T[6]
 那么T字符串0-5的字符中最长前缀与后缀的长度为2（AB为最长前缀与后缀）
 那么next[6] = 2;*/
+//https://www.bilibili.com/video/av96661990
 void getNext(char* T, int* next)
 {
 	int i = -1, j = 0;
@@ -61,6 +63,7 @@ void getNext(char* T, int* next)
 	}
 }
 
+//https://www.bilibili.com/video/av96254929
 int KMP(char* S, char* T, int* next)
 {
 	int i = 0, j = 0;
